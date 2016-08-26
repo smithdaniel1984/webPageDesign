@@ -1,0 +1,71 @@
+﻿@model  webPageDesign.Models.Contact
+
+@{
+    ViewBag.Title = "Contact";
+}
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<div class="jumbotron" style="text-align:center">
+    <h2 style="color:white">
+        <span class="glyphicon glyphicon-phone" id="phoneLeft" style="color:white"></span>
+        Contact information
+        <span class="glyphicon glyphicon-phone" id="phoneRight" style="color:white"></span>
+</h2>
+</div>
+<div class="container col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <h3>Email Address</h3>
+    <a href="http://www.outlook.com">smithdaniel1984@outlook.com</a>
+</div>
+<div class="container col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <h3>Home Address</h3>
+    <p style="color:white">5019 Fort Sumter Rd.</p>
+    <p style="color:white">Raleigh, NC 27606</p>
+</div>
+<div class="container col-lg-5 col-md-5 col-sm-5 col-xs-5">
+    <h3>Best time to contact: <span class="glyphicon glyphicon-phone" style="color:white"></span></h3>
+    <p style="color:white">Monday-Friday 8:00am - 9:00am</p>
+    <p style="color:white">Monday-Friday 2:00pm - 2:30pm</p>
+    <p style="color:white">Monday-Friday after 5:30pm</p>
+</div>
+
+<div class="container">
+    <div class="row col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <a href="https://www.linkedin.com/in/daniel-smith-69b10543?authType=NAME_SEARCH&authToken=r9S4&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A152543639%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1469719841191%2Ctas%3Adaniel%20smith">
+            <img src="~/Pictures/linkedin.png" title="Linkedin link" id="linkedIcon" style="height: 85px; width: 90px" />
+        </a>
+    </div>
+    <div class="row col-lg-4 col-md-4 col-sm-4" style="padding-top: 4em" id="resume">
+        <a href="~/Docs/Resume2_1_16.docx">Resume in word format</a>
+    </div>
+    <div class="row col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="form-group">
+            @using (Html.BeginForm("Contact", "Contact"))
+            {
+                <label class="control-label" for="inputName" style="color:#317eac; font-size: medium">Leave a comment: </label>
+                <input type="text" class="form-control" name="txtBoxName" placeholder="Enter Name" id="txtBox"> <br />
+                <textarea spellcheck="true" style="height: 200px; width: 300px" placeholder="Enter comments" name="txtBoxComments" id="txtBoxComm"> </textarea>
+                <button type="submit" class="btn btn-primary" id="submitComment">Enter Comment</button>
+            }
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row col-lg-7 col-md-7 col-sm-7" style="text-wrap:normal; background-color:white;" id="classForm">
+        <form style="width: 100%; word-wrap:normal; overflow-wrap:normal" id="commentsForm">
+            @if (Model.comments != null && Model.comments != " " )
+            {
+                foreach (string comment in Model.comments.Split(','))
+                {
+                    int i = 1;
+                   
+                    <h5>@Model.Name</h5>
+                    <p> @i. @Model.comments</p>
+                    @Model.commentDate
+                   
+                    i++;
+                }
+            }
+        </form>
+    </div>
+</div>
+<script src="~/Content/jQuery2_copy.js"></script>

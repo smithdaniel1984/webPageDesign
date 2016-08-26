@@ -1,0 +1,43 @@
+﻿@model webPageDesign.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Details about comment that was entered</h4>
+    <hr />
+    <dl class="dl-horizontal" style="color:white">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.commentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.commentDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.contactID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

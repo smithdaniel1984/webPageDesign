@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "Education Section";
+}
+
+<div class="jumbotron" style="text-align:center" title="Education Section">
+    <h2 style="color:white" id="aboutHeader">
+        <span class="glyphicon glyphicon-education" id="rightInfoHand"></span>
+        School information and Certifications
+        <span class="glyphicon glyphicon-education" id="leftInfoHand"></span>
+    </h2>
+</div>
+<div class="container">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="row col-lg-8 col-md-9 col-sm-9 col-xs-9">
+            <!-- Indicators -->
+            <ol class="carousel-indicators col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <!-- right side -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="row col-lg-10 col-md-10 col-sm-10 col-xs-6" id="inner">
+                        <img src="~/Pictures/WP_20150709_18_42_54_Pro.jpg" width="800" height="900" title="Graduation photo" class="img-rounded" />
+                        <div class="carousel-caption" style="padding-left: 10em">
+                            <h3>Mycomputercareer</h3>
+                            <p>Professor Alex on the right - Daniel Smith on the left</p>
+                        </div>
+                        <span class="label label-info">Pictures of graduation from mycomputercareer</span>
+                    </div>
+                </div>
+
+                <!-- Wrapper for slides -->
+                <!--Left side-->
+                <div class="item">
+                    <div class="row col-lg-10 col-md-10 col-sm-10 col-xs-6">
+                        <img src="~/Pictures/WP_20150709_18_41_35_Pro.jpg" width="800" height="900" title="Graduation photo" class="img-rounded" />
+                        <div class="carousel-caption" style="padding-left: 12em">
+                            <h3>Mycomputercareer</h3>
+                            <p>classmate and myself</p>
+                        </div>
+                        <span class="label label-info">Pictures of graduation from mycomputercareer</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <div class="container">
+                <div class="row">
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" title="previous">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color:skyblue"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control  right carousel-control small" href="#carousel-example-generic" role="button" data-slide="next" title="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color:skyblue" id="rightPointer"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-lg-4 col-md-4 col-sm-1 col-xs-1">
+        <div class="row col-lg-12 col-md-11 col-sm-11" style="color:white" id="aboutPicsHead">
+            <span class="label label-info" style="font-size:medium" id="aboutLbl">About the Photos</span>
+            <div><h2 class="glyphicon glyphicon glyphicon-education" id="eduIcon" style="color:white; opacity: .6"></h2></div>
+            <p id="aboutPics" style="font-size:medium; padding-top: 10px; border:solid; border-width:thin">
+                The photos featured here are from my graduation at MyComputerCareer. While attending
+                Mycomputercareer I earned my a+, network+ and MTA in multiple areas of IT."
+            </p>
+
+            <div style="padding-top: 10%; font-size:medium">
+                <span class="label label-info" style="font-size:medium" id="certLbl">Certification links</span>
+            </div>
+            <div style="padding-top: 5%; font-size: medium" id="certLinks">
+                <a href="~/Certification/MTAcert.pdf">C# MTA certification</a>
+                <div>
+                    <a href="~/Certification/MCPcert.pdf">MCP certification</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row col-lg-12 col-md-12 col-sm-12">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <h3 id="schoolsHead">Schools attended</h3>
+            <p style="font-size:medium"><h5>BS Degree:</h5>  <span style="color:white">Elizabeth City State University</span>
+            <p style="font-size:medium"><h5>Major:</h5> <span style="color:white">Computer and Information Science</span></p>
+            <p style="font-size:medium"><h5>Minor:</h5> <span style="color:white">Telecommunications</span></p>
+            <p style="font-size:medium"><h5>Technical School:</h5> <span style="color:white">Mycomputercareer</span></p>
+            <img src="~/Pictures/ecsuPic.jpg" height="120" width="140" id="ecsuPic" title="ECSU Picture" />
+            <p style="font-size:small; color:white">Image provided by: <a href="http://meacswacsports.blogspot.com">meacswacsports.blogspot.com</a></p>
+            <img src="~/Pictures/mycc.jpg" height="120" width="140" id="myccPic" title="MyCC Picture" />
+            <p style="font-size:small; color:white">Image provided by: <a href="http://american-school-search.com">american-school-search.com</a></p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <h3>Certifications </h3>
+            <h5>MTA(Microsoft Technical Associate) certifications</h5>
+            <ul>
+                <li style="font-size:medium">Operating systems</li>
+                <li style="font-size:medium">Networking</li>
+                <li style="font-size:medium">C# programming</li>
+                <li style="font-size:medium">Security</li>
+                <li style="font-size:medium">Server Administration</li>
+            </ul>
+            <h5>CompTIA Certifications</h5>
+            <ul>
+                <li style="font-size:medium">Network+</li>
+                <li style="font-size:medium">A+</li>
+            </ul>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="border-right:solid; border-right-color: skyblue">
+            <h3>Skills obtained</h3>
+            <h5>Programming skills</h5>
+            <h5>Visual Studio(IDE)</h5>
+            <ul>
+                <li style="font-size:medium">C#</li>
+                <li style="font-size:medium">ASP.NET</li>
+                <li style="font-size:medium">C</li>
+                <li style="font-size:medium">VB.net</li>
+            </ul>
+            <h5>Eclipse(IDE)</h5>
+            <ul>
+                <li style="font-size:medium">Java</li>
+            </ul>
+            <h5>Front-end</h5>
+            <ul>
+                <li style="font-size:medium">HTML</li>
+                <li style="font-size:medium">JQuery</li>
+                <li style="font-size:medium">Bootstrap</li>
+                <li style="font-size:medium">Javascript</li>
+            </ul>
+            <h5>Backend</h5>
+            <ul>
+                <li style="font-size:medium">MySQL</li>
+                <li style="font-size:medium">MS server 2012</li>
+            </ul>
+
+            <h5>Operating systems</h5>
+            <ul>
+                <li style="font-size:small">Windows: 10, 8, 7, XP </li>
+            </ul>
+            <h5>Software testing tools/language</h5>
+            <ul>
+                <li style="font-size:medium"><b>HP UFT:</b> VB.script</li>
+                <li style="font-size:medium"><b>Selenium:</b> Eclipse-Java</li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <h3>Involvement/Internship</h3>
+            <h5>Robotics Team</h5>
+            <p style="color:white">
+                Was part of the robotics team for <strong style="color:skyblue">Elizabeth City State University.</strong>
+                We participated in a robitics competition with other HBCU's from across the country.
+            </p>
+            <p style="color:white">
+                Participated in a internship with <strong style="color:skyblue">Duke University</strong> were I was involved with
+                localization and mapping research.  Programmed in python on a linux base environment
+                while doing my projects for the University.  Kept a wiki page to inform of the progress
+                that was currently made.
+            </p>
+            <p style="color:white">
+                Assisted kids in summer camp with programming skills with Lego Mindstorms.
+                Kids were broken into groups and would work on projects such as a line follow or
+                bumper functions.
+            </p>
+            <img src="~/Pictures/dukePic.jpg" height="120" width="140" id="dukePic" />
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="~/Content/jQuery2_copy.js"></script>
+</div>

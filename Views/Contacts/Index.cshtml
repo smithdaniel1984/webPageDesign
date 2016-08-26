@@ -1,0 +1,80 @@
+﻿@model IEnumerable<webPageDesign.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<div class="jumbotron" style="text-align:center">
+    <h2 style="color:white">
+        <span class="glyphicon glyphicon-phone" id="phoneLeft" style="color:white"></span>
+        Contact information
+        <span class="glyphicon glyphicon-phone" id="phoneRight" style="color:white"></span>
+    </h2>
+</div>
+<div class="container col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <h3>Email Address</h3>
+    <a href="http://www.outlook.com">smithdaniel1984@outlook.com</a>
+</div>
+<div class="container col-lg-3 col-md-3 col-sm-3 col-xs-3">
+    <h3>Home Address</h3>
+    <p style="color:white">5019 Fort Sumter Rd.</p>
+    <p style="color:white">Raleigh, NC 27606</p>
+</div>
+<div class="container col-lg-5 col-md-5 col-sm-5 col-xs-5">
+    <h3>Best time to contact: <span class="glyphicon glyphicon-phone" style="color:white"></span></h3>
+    <p style="color:white">Monday-Friday 8:00am - 9:00am</p>
+    <p style="color:white">Monday-Friday 2:00pm - 2:30pm</p>
+    <p style="color:white">Monday-Friday after 5:30pm</p>
+</div>
+
+<div class="container">
+    <div class="row col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <a href="https://www.linkedin.com/in/daniel-smith-69b10543?authType=NAME_SEARCH&authToken=r9S4&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A152543639%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1469719841191%2Ctas%3Adaniel%20smith">
+            <img src="~/Pictures/linkedin.png" title="Linkedin link" id="linkedIcon" style="height: 85px; width: 90px" />
+        </a>
+    </div>
+    <div class="row col-lg-4 col-md-4 col-sm-4" style="padding-top: 4em" id="resume">
+        <a href="~/Docs/Resume2_1_16.docx">Resume in word format</a>
+    </div>
+</div>
+    <h4 style="text-align:center" id="addLink">
+        @Html.ActionLink("Click here to create a new comment entry", "Create")
+    </h4>
+    <table class="table" style="color:white">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.commentDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.comments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.commentDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.contactID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.contactID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.contactID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <script src="~/Content/jQuery2_copy.js"></script>
