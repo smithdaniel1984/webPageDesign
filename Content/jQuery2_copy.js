@@ -1,7 +1,7 @@
 ﻿//hover over hobbies on welcome page
 $(document).ready(function () {
     $('#hobbies').hover(function () {
-        $('#hobbies').text("Things I really enjoy doing")
+        $('#hobbies').text("Things I really enjoy doing");
         $('#hobbies').css('font-size', 30);
         $('#video2k1').fadeIn(3000);
     })
