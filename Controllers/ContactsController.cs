@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -34,7 +35,6 @@ namespace webPageDesign.Controllers
             }
             return View(contact);
         }
-
         // GET: Contacts/Create
         public ActionResult Create()
         {
@@ -50,11 +50,13 @@ namespace webPageDesign.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Contacts.Add(contact);
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
-
+            
             return View(contact);
         }
 

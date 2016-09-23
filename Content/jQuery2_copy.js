@@ -50,13 +50,14 @@ $('#homePagePic1').ready(function () {
     $('#homePagePic1').animate({
         width: 720,
         height: 550,
-    }, { duration: 500 });
-    $('#homePagePic1').fadeTo(150, .2);
+    }, { duration: 100 });
+    $('#homePagePic1').fadeTo(50, .2);
+   
 })
 .mouseleave(function () {
     $('#homePagePic1').css('width', 720);
     $('#homePagePic1').css('height', 550);
-    $('#homePagePic1').fadeTo(500, 1);
+    $('#homePagePic1').fadeTo(50, 1);
 });
 
 
@@ -284,13 +285,13 @@ $('#commentsForm').hover(function () {
 .mouseleave(function () {
     $('#commentsName').animate({
         fontSize: 14
-    }, 800);
+    }, 100);
     $('#commentsText').animate({
         fontSize: 14
-    }, 800);
+    }, 100);
     $('#classForm').animate({
         width: "600px"
-    }, 800);
+    }, 100);
 });
 
 //linkedin icon enlarge
@@ -334,4 +335,102 @@ $('#addLink').hover(function () {
     $('#addLink').animate({
         fontSize: 18,
     }, 1000);
+});
+
+//projects java image
+$(document).ready(function () {
+    $('#javaPic').animate({
+        height: 200,
+    }, 2000);
+});
+$('#javaPic').hover(function () {
+    $('#javaPic').animate({
+        height: 800,
+    }, 100)
+    $('#project2').hide();
+});
+$('#javaPic').mouseleave(function () {
+    $('#javaPic').animate({
+        height: 200,
+    }, 100)
+    $('#project2').show(100);
+});
+
+//projects page animate the icons in the jumbotron
+$('div').hover(function () {
+    $('#leftHome').animate({
+        left: '-150px',
+        opacity: '0.0'
+    }, 800);
+    $('#rightHome').animate({
+        left: '150px',
+        opacity: '.0'
+    }, 800);
+});
+$('div').mouseleave(function () {
+    $('#leftHome').animate({
+        left: '0px',
+        opacity: '1',
+    }, 800);
+})
+.mouseleave(function () {
+    $('#rightHome').animate({
+        left: '0px',
+        opacity: '1',
+    }, 800);
+});
+
+//calendar button 
+$(document).ready(function () {
+    $('#datePicker').click(function () { 
+        $('#datePicker').datepicker();
+    });
+ });
+
+//Comments creation section messages
+$(document).ready(function () {
+    $('#createComment').click(function () {
+        
+        if ($('#Name').val() === null || $('#Name').val() === "")
+        {
+            $('#commentName').show();
+        }
+        else if ($('#comments').val() === null || $('#comments').val() === "")
+        {
+            $('#commentBox').show();
+        }
+    });
+});
+
+//project page text animate
+$('div').ready(function () {
+    $('#projectText').animate({
+        fontSize: 50,
+        opacity: '0'
+    }, 1000);
+    $('#projectText').animate({
+        fontSize: 30,
+        opacity: '.9'
+    }, 1000);
+});
+
+//project image 2
+$(document).ready(function () {
+    $('#project2').hide();
+    $('#project2').show(8000);
+    $('#project2').animate({
+        height: 200,
+    }, 100);
+    $('#project2').hover(function () {
+        $('#project2').animate({
+            height: 800,
+        }, 100);
+        $('#javaPic').hide();
+    })
+    $('#project2').mouseleave(function () {
+        $('#project2').animate({
+            height: 200,
+        }, 100);
+        $('#javaPic').show();
+    })
 });

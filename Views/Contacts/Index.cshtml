@@ -7,7 +7,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 <div class="jumbotron" style="text-align:center">
-    <h2 style="color:white">
+    <h2 style="color:white" id="projectText">
         <span class="glyphicon glyphicon-phone" id="phoneLeft" style="color:white"></span>
         Contact information
         <span class="glyphicon glyphicon-phone" id="phoneRight" style="color:white"></span>
@@ -74,7 +74,11 @@
                     @Html.ActionLink("Delete", "Delete", new { id = item.contactID })
                 </td>
             </tr>
+            
         }
 
     </table>
+<div class="container" style="color: skyblue">
+   Current date: @DateTime.Now
+</div>
     <script src="~/Content/jQuery2_copy.js"></script>
